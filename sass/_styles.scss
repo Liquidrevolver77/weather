@@ -14,21 +14,38 @@ body{
 }
 h1{
 	font-family: $oswald;
-	font-size: 60px;
-	line-height: 80px;
+	font-size: 30px;
+	line-height: 40px;
 	margin: 0;
 	text-transform: uppercase;
+  @media(min-width: 1000px) {
+    font-size: 60px;
+    line-height: 80px;
+  }
+    
 }
 h2{
 	font-family: $oswald;
-	font-size: 35px;
-	line-height: 45px;
+	font-size: 20px;
+  line-height: 25px;
 	margin: 0;
+  @media(min-width: 1000px) {
+    font-size: 35px;
+    line-height: 45px;
+  }
+    
 }
 h3{
   font-family: $oswald;
-  font-size: 25px;
-  line-height: 35px; 
+  font-size: 20px;
+  line-height: 25px;
+  margin-bottom: .75em;
+  @media(min-width: 1000px) {
+    font-size: 25px;
+    line-height: 35px; 
+    margin-bottom: 1em;
+  }
+    
 }
 p{
 	margin: 0;
@@ -42,8 +59,13 @@ p{
 }
 .tempNow{
 	font-family: $oswald;
-	font-size: 115px;
-  line-height: 135px;
+	font-size: 60px;
+  line-height: 70px;
+  @media(min-width: 1000px) {
+    font-size: 115px;
+    line-height: 135px;
+  }
+    
 }
 main{
 	margin: auto;
@@ -72,10 +94,15 @@ main{
 .locationInput{
   width: 100%;
   background: #888884;
-  padding: 50px;
+  padding: 30px;
   font-size: 17px;
   line-height: 1.4em;
+  padding: 30px 20px;
+  @media(min-width: 600px) {
+    padding: 40px 30px;
+  }
   @media(min-width: 1000px) {
+    padding: 50px;
     display: table-cell;
     width: 30%;
     height: 100%;
@@ -200,17 +227,26 @@ main{
 
 
 #todayWrapper .today{
-  min-height: 400px;
-  height: 45vh;
 	background: $blue;
 	color: #e7e7e7;
-	padding: 50px 100px;
+	padding: 30px 20px;
 	position: relative;
+  @media(min-width: 600px) {
+    padding: 40px 30px;
+  }
+  @media(min-width: 1000px) {
+    padding: 50px 100px;
+    min-height: 400px;
+    height: 45vh;
+  }
+    
 }
 .todayText{
-	position: relative;
-	top: 50%;
-	@include transform(translateY(-50%));
+  @media(min-width: 1000px) {
+    position: relative;
+    top: 50%;
+    @include transform(translateY(-50%)); 
+  }
 }
 .iconNow{
 	position: absolute;
@@ -263,14 +299,16 @@ main{
     height: 55vh;
   }
   .day{
-    padding: 0;
     width: 100%;
     display: block;
     vertical-align: top;
-    padding: 20px 15px;
+    padding: 20px;
     background: #AE5733;
     color: #e7e7e7;
     position: relative;
+    @media(min-width: 600px) {
+      padding: 20px 30px;
+    }
     @media(min-width: 1000px) {
       display: table-cell;
       padding: 40px 15px;
@@ -355,12 +393,16 @@ main{
 }
 
 .poweredBy{
-  position: fixed;
-  z-index: 99;
-  bottom: 0;
-  right: 0;
+  text-align: center;
   font-size: 18px;
   background: #888884;
+  @media(min-width: 1000px) {
+    position: fixed;
+    z-index: 99;
+    bottom: 0;
+    right: 0;
+  }
+    
   a{
     text-decoration: none;
     display: block;

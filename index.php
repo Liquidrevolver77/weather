@@ -22,7 +22,7 @@
 				date_default_timezone_set('America/New_York');
 				$today = date('F j, Y');
 				$forecast = new ForecastIO($api_key, $units, $lang);
-				$defaultLocation = 'nashua, NH';
+				$defaultLocation = 'New York, NY';
 				if( !isset($_GET['location']) ){
 					$_GET['location'] = $defaultLocation;
 				}
@@ -54,7 +54,7 @@
 					$todayHTML .= '<div class="today">';
 					$todayHTML .= '<div class="todayText">';
 					$todayHTML .= '<h1 class="locationName">'.$niceName.'</h1>';
-					$todayHTML .= '<span class="tempNow">'.round($dataNow->getTemperature()).'</span>';
+					$todayHTML .= '<span class="tempNow">'.round($dataNow->getTemperature()).'&deg;</span>';
 					$todayHTML .= '<h2 class="todaySummary">'.$dataNow->getSummary().'</h2>';
 					$todayHTML .= '<p class="laterToday">'.$laterToday.'</p>';
 					$todayHTML .= '</div>';
